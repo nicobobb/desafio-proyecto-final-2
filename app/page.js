@@ -1,5 +1,11 @@
-import { Button } from "@/components/ui/button";
+import Header from "./components/Header";
+import ProductsWrapper from "./components/ProductsWrapper";
 
 export default function Home() {
-  return <></>;
+    return (
+        <>
+            <Header />
+            <ProductsWrapper />
+        </>
+    );
 }
