@@ -7,6 +7,7 @@ import {
     DialogDescription,
 } from "@/components/ui/dialog";
 import { HiShoppingCart } from "react-icons/hi";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -18,9 +19,15 @@ export default function Header() {
                 <div>
                     <nav>
                         <ul className="flex justify-evenly">
-                            <li>Alta</li>
-                            <li>Contacto</li>
-                            <li>Nosotros</li>
+                            <li>
+                                <Link href="/alta">Alta</Link>
+                            </li>
+                            <li>
+                                <Link href="/contacto">Contacto</Link>
+                            </li>
+                            <li>
+                                <Link href="/nosotros">Nosotros</Link>
+                            </li>
                             <li>
                                 <Dialog>
                                     <DialogTrigger>
