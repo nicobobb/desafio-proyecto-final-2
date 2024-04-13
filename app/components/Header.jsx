@@ -13,29 +13,48 @@ export default function Header() {
     return (
         <>
             <div className="bg-[#fab302] py-2 text-center">
-                <img src="/logo-toys.png" width={100} className="mx-auto" />
+                <Link href="/">
+                    <img src="/logo-toys.png" width={100} className="mx-auto" />
+                </Link>
             </div>
             <div className="bg-[#ffefc9] py-2 text-center text-[#c8902c]">
                 <div>
                     <nav>
                         <ul className="flex justify-evenly">
                             <li>
-                                <Link href="/alta">Alta</Link>
+                                <Link
+                                    href="/alta"
+                                    className="text-lg font-semibold"
+                                >
+                                    Alta
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/contacto">Contacto</Link>
+                                <Link
+                                    href="/contacto"
+                                    className="text-lg font-semibold"
+                                >
+                                    Contacto
+                                </Link>
                             </li>
                             <li>
-                                <Link href="/nosotros">Nosotros</Link>
+                                <Link
+                                    href="/nosotros"
+                                    className="text-lg font-semibold"
+                                >
+                                    Nosotros
+                                </Link>
                             </li>
                             <li>
                                 <Dialog>
                                     <DialogTrigger>
-                                        <HiShoppingCart />
+                                        <HiShoppingCart className="text-3xl" />
                                     </DialogTrigger>
-                                    <DialogContent>
+                                    <DialogContent className="bg-[#ffefc9]">
                                         <DialogHeader>
-                                            <DialogTitle>Carrito</DialogTitle>
+                                            <DialogTitle className="py-2 text-center text-[#c8902c]">
+                                                Carrito
+                                            </DialogTitle>
                                             <DialogDescription>
                                                 This action cannot be undone.
                                                 This will permanently delete
