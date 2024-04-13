@@ -2,7 +2,7 @@ import Image from "next/image";
 function Card({ id, name, img, category, brand, shortDesc, delivery }) {
     return (
         <div className="p-4 bg-[#ffefc9] rounded-md">
-            <div className="w-full overflow-hidden rounded-md group-hover:opacity-75 lg:h-80">
+            <div className="w-full overflow-hidden rounded-md group-hover:opacity-75">
                 <Image
                     src={img}
                     alt={shortDesc}
