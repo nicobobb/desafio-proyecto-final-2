@@ -3,6 +3,14 @@ import React from "react";
 const Alta = () => {
     return (
         <div>
+            <div
+                style={{ backgroundImage: `url("bg-alta.jpg")` }}
+                className="h-96 w-full bg-cover bg-center"
+            >
+                <h3 className="text-[#c78f02] font-bold text-2xl h-full flex justify-center items-center">
+                    Alta
+                </h3>
+            </div>
             <form className="m-auto w-11/12 max-w-96 my-6">
                 <fieldset className="my-4 pt-px pl-2 bg-[#fffbf2] text-[#c78f02] border rounded outline-none border-[#c78f02]">
                     <legend className="px-2">
