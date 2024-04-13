@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const Nosotros = () => {
     return (
@@ -26,9 +26,12 @@ const Nosotros = () => {
                         </p>
                     </div>
 
-                    <img
+                    <Image
                         src="/aboutus1.jpg"
-                        alt=""
+                        alt="Foto de la juguetería de frente"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
                         className="w-60 rounded-2xl m-auto p-2.5"
                     />
                 </div>
@@ -46,9 +49,12 @@ const Nosotros = () => {
                         </p>
                     </div>
 
-                    <img
+                    <Image
                         src="/aboutus2.jpg"
-                        alt=""
+                        alt="Ejemplo de juguete con distintos colores"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
                         className="w-60 rounded-2xl m-auto p-2.5 "
                     />
                 </div>
@@ -84,9 +90,12 @@ const Nosotros = () => {
                         </p>
                     </div>
 
-                    <img
+                    <Image
                         src="/aboutus3.jpg"
-                        alt=""
+                        alt="Foto de la juguetería por dentro"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
                         className="w-60 rounded-2xl m-auto p-2.5 "
                     />
                 </div>
@@ -104,9 +113,12 @@ const Nosotros = () => {
                         <h3>¡Esperamos verte pronto!</h3>
                     </div>
 
-                    <img
+                    <Image
                         src="/aboutus4.jpg"
-                        alt=""
+                        alt="Inaguración de la juguetería"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
                         className="w-60 rounded-2xl m-auto p-2.5 "
                     />
                 </div>

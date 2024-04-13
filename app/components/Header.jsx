@@ -8,13 +8,20 @@ import {
 } from "@/components/ui/dialog";
 import { HiShoppingCart } from "react-icons/hi";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
     return (
         <>
             <div className="bg-[#fab302] py-2 text-center">
                 <Link href="/">
-                    <img src="/logo-toys.png" width={100} className="mx-auto" />
+                    <Image
+                        src="/logo-toys.png"
+                        width={265}
+                        alt="logo"
+                        height={75}
+                        className="mx-auto h-auto"
+                    />
                 </Link>
             </div>
             <div className="bg-[#ffefc9] py-2 text-center text-[#c8902c]">
