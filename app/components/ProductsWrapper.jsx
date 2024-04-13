@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getProducts } from "../util/api";
 import Card from "./Card";
 
