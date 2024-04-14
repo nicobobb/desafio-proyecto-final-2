@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Segunda entrega TP Final EducaciónIT
 
-## Getting Started
+Este proyecto representa la segunda entrega de mi Trabajo Práctico Final en EducaciónIT. Se trata de una aplicación de comercio electrónico con React.js
 
-First, run the development server:
+## Funcionalidades:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Listado de Productos:** Los usuarios pueden ver productos disponibles en el sitio. Cada producto muestra una imagen, nombre, precio y descripción.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   **Formulario de Alta de Productos:** Permite a los usuarios agregar nuevos juguetes al catálogo. Este formulario guarda el producto en el servicio de mockapi.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+-   **Sección "Contacto":** Permite enviar un comentario a la tienda y subirlo mediante un método post a mockapi
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+-   **Sección "Nosotros":** Sección dedicada para ver más información sobre la empresa.
 
-## Learn More
+# Stack Utilizado
 
-To learn more about Next.js, take a look at the following resources:
+El desarrollo se llevó a cabo utilizando las siguientes tecnologías:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   **Next (React.js):** Para la estructura básica de las páginas.
+-   **Tailwind:** Para dar un diseño y permitir adaptarla a cada resolución de pantalla.
+-   **Zustand:** Para manejar el estado global de la web y agregar elementos al carrito.
+-   **react-icons:** Para importar los diferentes iconos.
+-   **axios:** Para manejar las peticios GET y POST al servicio de mockapi.
