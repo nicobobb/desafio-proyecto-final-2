@@ -8,7 +8,7 @@ function ProductsWrapper() {
 
     useEffect(() => {
         getProducts()
-            .then((data) => setProducts(data))
+            .then((data) => setProducts(data.products))
             .catch((err) => console.error(err));
     }, []);
 

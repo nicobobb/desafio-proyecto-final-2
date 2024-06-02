@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: "https://6613568e53b0d5d80f673015.mockapi.io/api/v1/",
+    baseURL: "https://proyecto-integrador-bobb.onrender.com/api/",
 });
 
 export const getProducts = async () => {
@@ -9,8 +9,12 @@ export const getProducts = async () => {
     return resp.data;
 };
 
-export const postProduct = async (body) => {
-    const resp = await axiosInstance.post("/products", body);
+export const postProducts = async (formData) => {
+    const resp = await axiosInstance.post("/products", formData, {
+        headers: {
+            "Content-Type": "multipart/form-data",
+        },
+    });
     return resp.data;
 };
 

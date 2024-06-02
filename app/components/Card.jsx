@@ -1,10 +1,10 @@
 import Image from "next/image";
-function Card({ id, name, img, category, brand, shortDesc, delivery }) {
+function Card({ id, name, imgUrl, category, brand, shortDesc, delivery }) {
     return (
         <div className="p-4 bg-[#ffefc9] rounded-md">
             <div className="w-full overflow-hidden rounded-md group-hover:opacity-75">
                 <Image
-                    src={img}
+                    src={imgUrl}
                     alt={shortDesc}
                     width={0}
                     height={0}

@@ -1,6 +1,6 @@
 "use client";
 import { useForm } from "react-hook-form";
-import { postProduct } from "../util/api";
+import { postProducts } from "../util/api";
 
 const Alta = () => {
     const {
@@ -10,9 +10,18 @@ const Alta = () => {
     } = useForm();
 
     const onSubmit = (data) => {
-        data.img =
-            "https://res.cloudinary.com/dh92rbo5b/image/upload/ar_1:1,c_fill/v1713105598/base-photo_pwoge7.webp";
-        postProduct(data)
+        const formData = new FormData();
+
+        // Añadir cada campo del formulario a FormData
+        for (const key in data) {
+            if (key === "image" && data[key].length > 0) {
+                formData.append(key, data[key][0]);
+            } else {
+                formData.append(key, data[key]);
+            }
+        }
+
+        postProducts(formData)
             .then((data) => console.log(data))
             .catch((err) => console.error(err));
     };
@@ -30,6 +39,7 @@ const Alta = () => {
             <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="m-auto w-11/12 max-w-96 my-6"
+                enctype="multipart/form-data"
             >
                 <fieldset className="my-4 pt-px pl-2 bg-[#fffbf2] text-[#c78f02] border rounded outline-none border-[#c78f02]">
                     <legend className="px-2">
@@ -159,9 +169,15 @@ const Alta = () => {
                     </legend>
                     <input
                         type="file"
+                        {...register("image", { required: true })}
                         className="py-1 file:rounded-sm rounded-sm bg-[#fffbf2] focus:outline-none block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:border-0 file:font-semibold file:bg-[#f3ead5] file:text-[#c78f02] hover:file:bg-[#e7d6ac]"
                     />
                 </fieldset>
+                {errors.image && (
+                    <span className="text-red-500">
+                        Por favor suba una imagen
+                    </span>
+                )}
                 <div className="text-center">
                     <button
                         type="submit"
