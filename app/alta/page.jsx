@@ -1,11 +1,13 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { postProducts } from "../util/api";
+import { Toaster, toast } from "sonner";
 
 const Alta = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
 
@@ -22,15 +24,23 @@ const Alta = () => {
         }
 
         postProducts(formData)
-            .then((data) => console.log(data))
-            .catch((err) => console.error(err));
+            .then((data) => {
+                console.log(data);
+                reset();
+                toast.success("Producto dado de alta CORRECTAMENTE");
+            })
+            .catch((err) => {
+                console.error(err);
+                toast.error("ERROR al enviar");
+            });
     };
 
     return (
         <div>
+            <Toaster richColors />
             <div
                 style={{ backgroundImage: `url("bg-alta.jpg")` }}
-                className="h-96 w-full bg-cover bg-center"
+                className="h-40 w-full bg-cover bg-center"
             >
                 <h3 className="text-[#c78f02] font-bold text-2xl h-full flex justify-center items-center">
                     Alta

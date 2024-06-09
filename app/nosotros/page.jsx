@@ -5,7 +5,7 @@ const Nosotros = () => {
         <>
             <div
                 style={{ backgroundImage: `url("bg-nosotros.jpg")` }}
-                className="h-96 w-full bg-cover bg-center"
+                className="h-40 w-full bg-cover bg-center"
             >
                 <h3 className="text-[#c78f02] font-bold text-2xl h-full flex justify-center items-center">
                     Nosotros

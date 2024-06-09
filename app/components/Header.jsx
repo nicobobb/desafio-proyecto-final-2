@@ -9,9 +9,9 @@ export default function Header() {
                 <Link href="/">
                     <Image
                         src="/logo-toys.png"
-                        width={265}
+                        width={150}
                         alt="logo"
-                        height={75}
+                        height={30}
                         className="mx-auto h-auto"
                     />
                 </Link>

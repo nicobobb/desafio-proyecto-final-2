@@ -29,7 +29,7 @@ const Contacto = () => {
             <Toaster richColors />
             <div
                 style={{ backgroundImage: `url("bg-contacto.png")` }}
-                className="h-96 w-full bg-cover bg-center"
+                className="h-40 w-full bg-cover bg-center"
             >
                 <h3 className="text-[#c78f02] font-bold text-2xl h-full flex justify-center items-center">
                     Contacto
