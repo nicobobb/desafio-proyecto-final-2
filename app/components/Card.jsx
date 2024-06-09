@@ -1,5 +1,14 @@
 import Image from "next/image";
-function Card({ id, name, imgUrl, category, brand, shortDesc, delivery }) {
+import { useCartStore } from "../stores/cart-store";
+
+function Card({ _id, name, imgUrl, category, brand, shortDesc, delivery }) {
+    const { addProd } = useCartStore();
+
+    const handleAddToCart = () => {
+        console.log(_id);
+        addProd({ _id: _id, quantity: 1 });
+    };
+
     return (
         <div className="p-4 bg-[#ffefc9] rounded-md">
             <div className="w-full overflow-hidden rounded-md group-hover:opacity-75">
@@ -23,7 +32,10 @@ function Card({ id, name, imgUrl, category, brand, shortDesc, delivery }) {
                 ) : (
                     <p className="pt-3 text-gray-500">Envío con cargo </p>
                 )}
-                <button className="flex items-center justify-center rounded-md py-2 px-4 mt-3 mx-auto bg-[#e94587] text-white">
+                <button
+                    className="flex items-center justify-center rounded-md py-2 px-4 mt-3 mx-auto bg-[#e94587] text-white"
+                    onClick={handleAddToCart}
+                >
                     Agregar al carrito
                 </button>
             </div>
