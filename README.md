@@ -1,5 +1,8 @@
 # Segunda entrega TP Final EducaciónIT
 
+![image](https://github.com/nicobobb/desafio-proyecto-final-2/assets/24362548/69b0fa7d-5dce-4da1-921d-fd313c18df77)
+
+
 Este proyecto representa la segunda entrega de mi Trabajo Práctico Final en EducaciónIT. Se trata de una aplicación de comercio electrónico con React.js
 
 ## Funcionalidades:
