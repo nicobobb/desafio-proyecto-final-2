@@ -1,14 +1,6 @@
-import {
-    Dialog,
-    DialogTrigger,
-    DialogContent,
-    DialogHeader,
-    DialogTitle,
-    DialogDescription,
-} from "@/components/ui/dialog";
-import { HiShoppingCart } from "react-icons/hi";
 import Link from "next/link";
 import Image from "next/image";
+import CardModal from "./CardModal";
 
 export default function Header() {
     return (
@@ -53,24 +45,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Dialog>
-                                    <DialogTrigger>
-                                        <HiShoppingCart className="text-3xl" />
-                                    </DialogTrigger>
-                                    <DialogContent className="bg-[#ffefc9]">
-                                        <DialogHeader>
-                                            <DialogTitle className="py-2 text-center text-[#c8902c]">
-                                                Carrito
-                                            </DialogTitle>
-                                            <DialogDescription>
-                                                This action cannot be undone.
-                                                This will permanently delete
-                                                your account and remove your
-                                                data from our servers.
-                                            </DialogDescription>
-                                        </DialogHeader>
-                                    </DialogContent>
-                                </Dialog>
+                                <CardModal />
                             </li>
                         </ul>
                     </nav>

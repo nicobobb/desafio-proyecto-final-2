@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useCartStore } from "../stores/cart-store";
+import { Toaster, toast } from "sonner";
 
 function Card({ _id, name, imgUrl, category, brand, shortDesc, delivery }) {
     const { addProd } = useCartStore();
@@ -7,10 +8,12 @@ function Card({ _id, name, imgUrl, category, brand, shortDesc, delivery }) {
     const handleAddToCart = () => {
         console.log(_id);
         addProd({ _id: _id, quantity: 1 });
+        toast.success("Producto agregado al Carrito");
     };
 
     return (
         <div className="p-4 bg-[#ffefc9] rounded-md">
+            <Toaster richColors />
             <div className="w-full overflow-hidden rounded-md group-hover:opacity-75">
                 <Image
                     src={imgUrl}
