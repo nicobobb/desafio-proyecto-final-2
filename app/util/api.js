@@ -19,6 +19,7 @@ export const postProducts = async (formData) => {
 };
 
 export const postMessage = async (body) => {
+    console.log(body);
     const resp = await axiosInstance.post("/messages", body);
     return resp.data;
 };

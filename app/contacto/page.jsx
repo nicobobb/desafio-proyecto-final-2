@@ -1,22 +1,32 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { postMessage } from "../util/api";
+import { Toaster, toast } from "sonner";
 
 const Contacto = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
 
     const onSubmit = (data) => {
         postMessage(data)
-            .then((data) => console.log(data))
-            .catch((err) => console.error(err));
+            .then((data) => {
+                console.log(data);
+                reset();
+                toast.success("Mensaje enviado correctamente");
+            })
+            .catch((err) => {
+                console.error(err);
+                toast.error("ERROR al enviar");
+            });
     };
 
     return (
         <div>
+            <Toaster richColors />
             <div
                 style={{ backgroundImage: `url("bg-contacto.png")` }}
                 className="h-96 w-full bg-cover bg-center"

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { HiShoppingCart } from "react-icons/hi";
 import Image from "next/image";
-import { useCartStore } from "../stores/cart-store"; // Adjust the import path as necessary
+import { useCartStore } from "../stores/cart-store";
 import { useEffect } from "react";
 
 const CardModal = () => {
