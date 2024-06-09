@@ -65,16 +65,28 @@ const Contacto = () => {
                 )}
                 <fieldset className="my-4 pt-px pl-2 bg-[#fffbf2] text-[#c78f02] border rounded outline-none border-[#c78f02]">
                     <legend className="px-2">
+                        <span className="px-2">Asunto (*)</span>
+                    </legend>
+                    <input
+                        {...register("subject", { required: true })}
+                        className="py-1 rounded-sm bg-[#fffbf2] focus:outline-none"
+                    />
+                </fieldset>
+                {errors.subject && (
+                    <span className="text-red-500">Complete el Asunto</span>
+                )}
+                <fieldset className="my-4 pt-px pl-2 bg-[#fffbf2] text-[#c78f02] border rounded outline-none border-[#c78f02]">
+                    <legend className="px-2">
                         <span className="px-2">Comentario (*)</span>
                     </legend>
                     <textarea
                         cols="30"
                         rows="10"
                         className="py-1 rounded-sm bg-[#fffbf2] focus:outline-none w-11/12 m-auto resize-none"
-                        {...register("commment", { required: true })}
+                        {...register("body", { required: true })}
                     ></textarea>
                 </fieldset>
-                {errors.commment && (
+                {errors.body && (
                     <span className="text-red-500">Complete el Comentario</span>
                 )}
                 <div className="text-center">
